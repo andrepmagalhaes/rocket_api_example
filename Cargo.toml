@@ -1,0 +1,19 @@
+[package]
+name = "actix-api-example"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+rocket = { version = "0.5.0-rc.3", features = ["json"] }
+bcrypt = "0.14.0"
+chrono = { version = "0.4.24", features = ["serde"] }
+diesel = { version = "2.0.0", features = ["postgres", "chrono", "serde_json", "r2d2"] }
+diesel_cli = "2.0.1"
+dotenv = "0.15.0"
+jsonwebtoken = "8.3.0"
+log = "0.4.17"
+serde = "1.0.160"
+serde_derive = "1.0.160"
+serde_json = "1.0.96"
