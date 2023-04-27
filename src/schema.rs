@@ -7,8 +7,6 @@ diesel::table! {
         title -> Varchar,
         description -> Text,
         completed -> Bool,
-        created_at -> Timestamp,
-        updated_at -> Timestamp,
     }
 }
 
@@ -18,14 +16,9 @@ diesel::table! {
         name -> Varchar,
         email -> Varchar,
         password -> Varchar,
-        created_at -> Timestamp,
-        updated_at -> Timestamp,
     }
 }
 
 diesel::joinable!(todos -> users (user_id));
 
-diesel::allow_tables_to_appear_in_same_query!(
-    todos,
-    users,
-);
+diesel::allow_tables_to_appear_in_same_query!(todos, users,);
